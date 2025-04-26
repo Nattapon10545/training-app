@@ -51,7 +51,7 @@ form.addEventListener('submit', async (e) => {
     formData.append('email', token);
     formData.append('budgetYear', new Date(startDate).getFullYear() + 543);
 
-    const uploadRes = await fetch('https://script.google.com/macros/s/AKfycbwSZ119028RZXf1XyIIcDab4D9PArdss3aFDCaP3Dkk3PuMfuESWlDoXnJHj52mS3Qz/exec?action=uploadFile', {
+    const uploadRes = await fetch('https://script.google.com/macros/s/AKfycbygOLq7mNYXASGxbhpj6Xrvmv9StRLvrgT-_kNI6uyLXF-7S5EzO08tTD0F-9C7v6vkbg/exec?action=uploadFile', {
       method: 'POST',
       body: formData
     });
@@ -65,7 +65,7 @@ form.addEventListener('submit', async (e) => {
     }
   }
 
-  const res = await fetch('https://script.google.com/macros/s/AKfycbwSZ119028RZXf1XyIIcDab4D9PArdss3aFDCaP3Dkk3PuMfuESWlDoXnJHj52mS3Qz/exec?action=addTraining', {
+  const res = await fetch('https://script.google.com/macros/s/AKfycbygOLq7mNYXASGxbhpj6Xrvmv9StRLvrgT-_kNI6uyLXF-7S5EzO08tTD0F-9C7v6vkbg/exec?action=addTraining', {
     method: 'POST',
     body: JSON.stringify({
       email: token,
