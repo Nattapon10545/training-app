@@ -1,0 +1,61 @@
+<!-- list-training.html -->
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>รายการอบรม - Training Manager</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-yellow-50 min-h-screen flex flex-col">
+  <nav class="bg-white shadow p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-yellow-500">Training Manager</h1>
+    <button id="logoutBtn" class="bg-yellow-400 hover:bg-yellow-500 text-white py-2 px-4 rounded">Logout</button>
+  </nav>
+  <main class="flex-1 p-8">
+    <h2 class="text-xl font-bold mb-6">รายการอบรมของคุณ</h2>
+
+    <div class="mb-6">
+      <input type="text" id="searchInput" placeholder="ค้นหาชื่ออบรม..." class="w-full p-2 border rounded">
+    </div>
+
+    <div class="overflow-x-auto">
+      <table class="min-w-full bg-white rounded-lg shadow">
+        <thead class="bg-yellow-200">
+          <tr>
+            <th class="p-3 text-left">ชื่ออบรม</th>
+            <th class="p-3 text-left">วันที่เริ่ม</th>
+            <th class="p-3 text-left">วันที่สิ้นสุด</th>
+            <th class="p-3 text-left">จำนวนชั่วโมง</th>
+            <th class="p-3 text-left">ประเภท</th>
+            <th class="p-3 text-left">การจัดการ</th>
+          </tr>
+        </thead>
+        <tbody id="trainingTable" class="divide-y">
+          <!-- ข้อมูลตารางจะถูกเติมที่นี่ -->
+        </tbody>
+      </table>
+    </div>
+
+    <div class="flex justify-between items-center mt-4">
+      <button id="prevPage" class="bg-yellow-400 hover:bg-yellow-500 text-white px-4 py-2 rounded">ย้อนกลับ</button>
+      <span id="pageInfo" class="font-bold"></span>
+      <button id="nextPage" class="bg-yellow-400 hover:bg-yellow-500 text-white px-4 py-2 rounded">ถัดไป</button>
+    </div>
+
+  </main>
+
+  <!-- Popup Modal สำหรับดูข้อมูล -->
+  <div id="viewModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-md relative">
+      <h2 class="text-xl font-bold mb-4 text-yellow-500">รายละเอียดการอบรม</h2>
+      <div id="modalContent" class="space-y-2">
+        <!-- เนื้อหา modal จะมาแทรกที่นี่ -->
+      </div>
+      <button id="closeModalBtn" class="absolute top-2 right-2 text-gray-500 hover:text-black">✖</button>
+    </div>
+  </div>
+
+  <script src="./js/list-training.js"></script>
+</body>
+</html>

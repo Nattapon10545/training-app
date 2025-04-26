@@ -1,0 +1,52 @@
+<!-- add-training.html -->
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>เพิ่มข้อมูลอบรม - Training Manager</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-yellow-50 min-h-screen flex flex-col">
+  <nav class="bg-white shadow p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-yellow-500">Training Manager</h1>
+    <button id="logoutBtn" class="bg-yellow-400 hover:bg-yellow-500 text-white py-2 px-4 rounded">Logout</button>
+  </nav>
+  <main class="flex-1 p-8">
+    <h2 class="text-xl font-bold mb-6">เพิ่มข้อมูลอบรมใหม่</h2>
+    <form id="trainingForm" class="bg-white p-6 rounded-lg shadow space-y-4">
+      <input type="text" id="title" placeholder="ชื่อรายการอบรม" class="w-full p-2 border rounded" required>
+      <div class="flex gap-4">
+        <div class="flex-1">
+          <label class="block mb-1">วันที่เริ่มอบรม</label>
+          <input type="date" id="startDate" class="w-full p-2 border rounded" required>
+        </div>
+        <div class="flex-1">
+          <label class="block mb-1">วันที่สิ้นสุดอบรม</label>
+          <input type="date" id="endDate" class="w-full p-2 border rounded" required>
+        </div>
+      </div>
+      <input type="number" id="hours" placeholder="จำนวนชั่วโมง" class="w-full p-2 border rounded" required>
+      <input type="text" id="organization" placeholder="หน่วยงานที่จัดอบรม" class="w-full p-2 border rounded" required>
+      <div>
+        <label class="block mb-1">ประเภทการอบรม</label>
+        <select id="trainingType" class="w-full p-2 border rounded" required>
+          <option value="">-- เลือกประเภท --</option>
+          <option value="ออนไลน์">ออนไลน์</option>
+          <option value="เชิงปฏิบัติการ">เชิงปฏิบัติการ</option>
+          <option value="ประชุม">ประชุม</option>
+          <option value="สัมนา">สัมนา</option>
+        </select>
+      </div>
+      <div>
+        <label class="block mb-1">แนบไฟล์หลักฐาน (ไม่บังคับ)</label>
+        <input type="file" id="fileUpload" class="w-full p-2 border rounded">
+        <p id="fileName" class="text-sm text-gray-500 mt-1"></p>
+      </div>
+      <div id="loading" class="hidden text-yellow-500 font-bold mt-4">กำลังบันทึกข้อมูล...</div>
+      <button type="submit" class="w-full bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 rounded">เพิ่มข้อมูลอบรม</button>
+    </form>
+  </main>
+  <script src="./js/add-training.js"></script>
+</body>
+</html>
