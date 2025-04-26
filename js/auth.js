@@ -9,7 +9,7 @@ loginForm.addEventListener('submit', async (e) => {
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
   
-  const res = await fetch(`https://script.google.com/macros/s/AKfycbySViwrwFFOh9bLCuuA0fiH_r5t6VK3ML3FhfxL7eOtvxzCK_IuidF6q6l78J4Job9f/exec?action=login&email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`);
+  const res = await fetch(`https://script.google.com/macros/s/AKfycbwSZ119028RZXf1XyIIcDab4D9PArdss3aFDCaP3Dkk3PuMfuESWlDoXnJHj52mS3Qz/exec?action=login&email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`);
 
   
   const data = await res.json();

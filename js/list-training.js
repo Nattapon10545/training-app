@@ -17,7 +17,7 @@ async function fetchTrainings() {
     return;
   }
 
-  const res = await fetch(`https://script.google.com/macros/s/AKfycbySViwrwFFOh9bLCuuA0fiH_r5t6VK3ML3FhfxL7eOtvxzCK_IuidF6q6l78J4Job9f/exec?action=listTrainings&email=${token}`);
+  const res = await fetch(`https://script.google.com/macros/s/AKfycbwSZ119028RZXf1XyIIcDab4D9PArdss3aFDCaP3Dkk3PuMfuESWlDoXnJHj52mS3Qz/exec?action=listTrainings&email=${token}`);
   const data = await res.json();
 
   if (data.success) {
@@ -129,7 +129,7 @@ async function deleteTraining(index) {
   const training = trainings[index];
 
   if (confirm(`คุณแน่ใจว่าต้องการลบ "${training[2]}" หรือไม่?`)) {
-    const res = await fetch('https://script.google.com/macros/s/AKfycbySViwrwFFOh9bLCuuA0fiH_r5t6VK3ML3FhfxL7eOtvxzCK_IuidF6q6l78J4Job9f/exec?action=deleteTraining', {
+    const res = await fetch('https://script.google.com/macros/s/AKfycbwSZ119028RZXf1XyIIcDab4D9PArdss3aFDCaP3Dkk3PuMfuESWlDoXnJHj52mS3Qz/exec?action=deleteTraining', {
       method: 'POST',
       body: JSON.stringify({ id: training[0] }),
       headers: { 'Content-Type': 'application/json' }

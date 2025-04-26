@@ -13,7 +13,7 @@ async function fetchTrainingData() {
     return;
   }
 
-  const res = await fetch(`https://script.google.com/macros/s/AKfycbySViwrwFFOh9bLCuuA0fiH_r5t6VK3ML3FhfxL7eOtvxzCK_IuidF6q6l78J4Job9f/exec?action=listTrainings&email=${token}`);
+  const res = await fetch(`https://script.google.com/macros/s/AKfycbwSZ119028RZXf1XyIIcDab4D9PArdss3aFDCaP3Dkk3PuMfuESWlDoXnJHj52mS3Qz/exec?action=listTrainings&email=${token}`);
   const data = await res.json();
 
   if (data.success) {

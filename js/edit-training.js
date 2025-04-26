@@ -33,7 +33,7 @@ form.addEventListener('submit', async (e) => {
     trainingType: document.getElementById('trainingType').value
   };
 
-  const res = await fetch('https://script.google.com/macros/s/AKfycbySViwrwFFOh9bLCuuA0fiH_r5t6VK3ML3FhfxL7eOtvxzCK_IuidF6q6l78J4Job9f/exec?action=editTraining', {
+  const res = await fetch('https://script.google.com/macros/s/AKfycbwSZ119028RZXf1XyIIcDab4D9PArdss3aFDCaP3Dkk3PuMfuESWlDoXnJHj52mS3Qz/exec?action=editTraining', {
     method: 'POST',
     body: JSON.stringify(updatedTraining),
     headers: { 'Content-Type': 'application/json' }
