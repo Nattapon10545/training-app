@@ -1,17 +1,12 @@
-// js/auth.js
-
-const loginForm = document.getElementById('loginForm');
-const signupLink = document.getElementById('signupLink');
-
 loginForm.addEventListener('submit', async (e) => {
   e.preventDefault();
   
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
-  
+
   const url = `https://script.google.com/macros/s/AKfycbygOLq7mNYXASGxbhpj6Xrvmv9StRLvrgT-_kNI6uyLXF-7S5EzO08tTD0F-9C7v6vkbg/exec?action=login&email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`;
 
-  const res = await fetch(url); // <-- ไม่มี method ไม่มี headers ไม่มี body
+  const res = await fetch(url);
   const data = await res.json();
   
   if (data.success) {
@@ -20,8 +15,4 @@ loginForm.addEventListener('submit', async (e) => {
   } else {
     alert(data.message);
   }
-});
-
-signupLink.addEventListener('click', () => {
-  alert("ฟีเจอร์สมัครสมาชิกจะทำในอนาคต!");
 });
