@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Training Manager</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-yellow-50 min-h-screen">
+  <nav class="bg-white shadow p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-yellow-500">Training Manager</h1>
+    <button id="logoutBtn" class="bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded">Logout</button>
+  </nav>
+
+  <main class="p-6 space-y-6">
+    <div class="flex justify-end">
+      <a href="./add-training.html" class="bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded">+ เพิ่มข้อมูลอบรม</a>
+    </div>
+
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-bold mb-4">รายการอบรมของคุณ</h2>
+      <div class="overflow-x-auto">
+        <table class="min-w-full text-left text-sm">
+          <thead class="bg-yellow-100">
+            <tr>
+              <th class="px-4 py-2">ชื่ออบรม</th>
+              <th class="px-4 py-2">วันที่เริ่ม</th>
+              <th class="px-4 py-2">วันที่สิ้นสุด</th>
+              <th class="px-4 py-2">ชั่วโมง</th>
+              <th class="px-4 py-2">หน่วยงาน</th>
+            </tr>
+          </thead>
+          <tbody id="trainingTable" class="bg-white">
+            <!-- Data will be inserted here -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-bold mb-4">สรุปการอบรมของคุณ</h2>
+      <canvas id="trainingChart" class="w-full"></canvas>
+    </section>
+  </main>
+
+  <script src="./js/dashboard.js"></script>
+</body>
+</html>

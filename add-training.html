@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Training - Training Manager</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-yellow-50 min-h-screen">
+  <nav class="bg-white shadow p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-yellow-500">Training Manager</h1>
+    <a href="./dashboard.html" class="bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded">กลับสู่ Dashboard</a>
+  </nav>
+
+  <main class="p-6 max-w-2xl mx-auto space-y-6">
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-bold mb-4">เพิ่มข้อมูลอบรม</h2>
+      <form id="trainingForm" class="space-y-4">
+        <input type="text" id="title" placeholder="ชื่ออบรม" class="w-full p-2 border rounded" required>
+        <input type="date" id="startDate" placeholder="วันที่เริ่ม" class="w-full p-2 border rounded" required>
+        <input type="date" id="endDate" placeholder="วันที่สิ้นสุด" class="w-full p-2 border rounded" required>
+        <input type="number" id="hours" placeholder="ชั่วโมง" class="w-full p-2 border rounded" required>
+        <input type="text" id="organization" placeholder="หน่วยงาน" class="w-full p-2 border rounded" required>
+        <input type="text" id="trainingType" placeholder="ประเภทการอบรม" class="w-full p-2 border rounded" required>
+        <button type="submit" class="w-full bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 rounded">เพิ่มข้อมูล</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="./js/add-training.js"></script>
+</body>
+</html>
