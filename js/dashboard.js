@@ -6,12 +6,11 @@ document.getElementById('logoutBtn').addEventListener('click', () => {
 });
 
 async function fetchTrainingData() {
-  const token = localStorage.getItem('token');
-  if (!token) {
-    alert("กรุณาเข้าสู่ระบบก่อน");
-    window.location.href = "index.html";
-    return;
-  }
+  // const token = localStorage.getItem('token');
+// if (!token) {
+//   window.location.href = './index.html';
+// }
+
 
   const res = await fetch(`https://script.google.com/macros/s/AKfycbygOLq7mNYXASGxbhpj6Xrvmv9StRLvrgT-_kNI6uyLXF-7S5EzO08tTD0F-9C7v6vkbg/exec?action=listTrainings&email=${token}`);
   const data = await res.json();
